@@ -5,9 +5,8 @@ print('Vamos jogar PAR ou IMPAR')
 print('-=' * 15)
 
 cont = 0
-repetir = 1
 
-while repetir == 1:
+while True:
     computador = randint(0, 10)
     pi = str(input('Você deseja ser PAR ou IMPAR[P/I]? ')).upper().strip()[0]
     while pi not in 'PI':
@@ -28,7 +27,6 @@ while repetir == 1:
             cont += 1
         if resultado % 2 == 0:
             print(f'O resultado deu {resultado}, que e é par, o jogador perdeu!')
-            repetir = 0
             break
     if pi in 'P':
         if resultado % 2 == 0:
@@ -36,6 +34,5 @@ while repetir == 1:
             cont += 1
         if resultado % 2 != 0:
             print(f'O resultado deu {resultado}, que e é impar, o jogador perdeu!')
-            repetir = 0
             break
 print(f'O jogador venceu {cont}x.')
