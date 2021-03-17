@@ -9,10 +9,10 @@ repetir = 1
 
 while repetir == 1:
     computador = randint(0, 10)
-    pi = str(input('Você deseja ser PAR ou IMPAR[P/I]? ')).upper()
+    pi = str(input('Você deseja ser PAR ou IMPAR[P/I]? ')).upper().strip()[0]
     while pi not in 'PI':
         print('Digite um valor válido: ')
-        pi = str(input('Você quer ser PAR ou IMPAR[P/I]? ')).upper().strip()
+        pi = str(input('Você quer ser PAR ou IMPAR[P/I]? ')).upper().strip()[0]
     if pi in 'I':
         print('Você escolheu IMPAR.')
     elif pi in 'P':
